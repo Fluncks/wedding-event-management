@@ -1,5 +1,5 @@
 /**
- * Batak Wedding - UI helpers (sidebar, notifications, formatting)
+ * Horas Wedding - UI helpers (sidebar, notifications, formatting)
  */
 
 document.addEventListener('DOMContentLoaded', function () {

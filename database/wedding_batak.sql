@@ -1,4 +1,4 @@
--- Batak Wedding - MySQL schema (5 tables)
+-- Horas Wedding - MySQL schema (5 tables)
 -- Import: mysql -u root -p < database/wedding_batak.sql
 
 CREATE DATABASE IF NOT EXISTS wedding_batak
@@ -90,5 +90,5 @@ INSERT INTO users (name, email, password, role, phone) VALUES
 );
 
 INSERT INTO settings (setting_key, setting_value) VALUES
-('site_name', 'Batak Wedding'),
+('site_name', 'Horas Wedding'),
 ('welcome_note', 'Staff Portal');

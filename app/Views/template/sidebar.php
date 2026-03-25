@@ -15,7 +15,7 @@ $staffActive       = str_starts_with($u, 'admin/create-account');
     <div class="sidebar-logo">
       <i class="bi bi-heart-fill"></i>
     </div>
-    <h3>Batak Wedding</h3>
+    <h3>Horas Wedding</h3>
     <p>Staff Portal</p>
   </div>
 

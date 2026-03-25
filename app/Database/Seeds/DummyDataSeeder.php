@@ -43,7 +43,7 @@ class DummyDataSeeder extends Seeder
         ]);
 
         $db->table('settings')->insertBatch([
-            ['setting_key' => 'site_name', 'setting_value' => 'Batak Wedding'],
+            ['setting_key' => 'site_name', 'setting_value' => 'Horas Wedding'],
             ['setting_key' => 'welcome_note', 'setting_value' => 'Staff Portal'],
         ]);
 

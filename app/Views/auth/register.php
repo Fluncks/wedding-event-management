@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register - Batak Wedding Event Management</title>
+  <title>Register - Horas Wedding Event Management</title>
   
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
           <i class="bi bi-person-plus-fill"></i>
         </div>
         <h1>Create Account</h1>
-        <p>Join Batak Wedding Staff Portal</p>
+        <p>Join Horas Wedding Staff Portal</p>
       </div>
       
       <!-- Body -->
@@ -78,7 +78,7 @@
     
     <!-- Footer -->
     <div class="text-center mt-4" style="color: rgba(255,255,255,0.7); font-size: 13px;">
-      <p class="mb-1">&copy; 2024 Batak Wedding Event Management</p>
+      <p class="mb-1">&copy; 2024 Horas Wedding Event Management</p>
       <p>Horas! Celebrating Batak Traditions</p>
     </div>
   </div>
