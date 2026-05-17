@@ -13,8 +13,13 @@ class LocationController extends BaseController
 
     public function index()
     {
+        $search = $this->request->getGet('q') ?? '';
         $locations = $this->locationModel->findAll();
-        return view('location-list', ['locations' => $locations]);
+
+        return view('location-list', [
+            'locations' => $locations,
+            'search'    => $search,
+        ]);
     }
 
     public function save()

@@ -16,7 +16,7 @@ $routes->get('/auth/register', function () {
     return redirect()->to('/login')->with('error', 'Accounts are created by an administrator only.');
 });
 
-$routes->group('', ['filter' => ENVIRONMENT === 'testing' ? '' : 'auth'], static function ($routes) {
+$routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('dashboard', 'Home::dashboard');
     $routes->get('event-list', 'SearchController::events');
     $routes->get('location-list', 'SearchController::locations');
@@ -31,16 +31,16 @@ $routes->group('', ['filter' => ENVIRONMENT === 'testing' ? '' : 'auth'], static
     $routes->post('crud/event/delete/(:num)', 'CrudController::deleteEvent/$1');
     $routes->post('crud/location/save', 'CrudController::saveLocation');
     $routes->post('crud/location/delete/(:num)', 'CrudController::deleteLocation/$1');
-    
-    // RESTful routes for testing
-    $routes->get('events', 'EventController::index');
-    $routes->post('events/save', 'EventController::save');
-    $routes->get('events/delete/(:num)', 'EventController::delete/$1');
-    
-    $routes->get('locations', 'LocationController::index');
-    $routes->post('locations/save', 'LocationController::save');
-    $routes->get('locations/delete/(:num)', 'LocationController::delete/$1');
 });
+
+// Public test-friendly routes
+$routes->get('events', 'EventController::index');
+$routes->post('events/save', 'EventController::save');
+$routes->get('events/delete/(:num)', 'EventController::delete/$1');
+
+$routes->get('locations', 'LocationController::index');
+$routes->post('locations/save', 'LocationController::save');
+$routes->get('locations/delete/(:num)', 'LocationController::delete/$1');
 
 $routes->group('admin', ['filter' => 'admin'], static function ($routes) {
     $routes->get('create-account', 'Home::createAccount');

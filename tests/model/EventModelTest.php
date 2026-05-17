@@ -72,6 +72,7 @@ class EventModelTest extends CIUnitTestCase
     {
         $data = [
             'name'            => 'Test Wedding',
+            'client_id'       => 1,
             'event_date'      => '2025-12-25',
             'location_id'     => 1,
             'hacked_column'   => 'malicious_value',  // NOT in $allowedFields
@@ -105,6 +106,7 @@ class EventModelTest extends CIUnitTestCase
     {
         $data = [
             'name'        => 'Grand Ballroom Ceremony',
+            'client_id'   => 1,
             'event_date'  => '2025-06-15',
             'location_id' => 1,
         ];
@@ -129,6 +131,7 @@ class EventModelTest extends CIUnitTestCase
     {
         $id = $this->model->insert([
             'name'        => 'Event To Delete',
+            'client_id'   => 1,
             'event_date'  => '2025-03-01',
             'location_id' => 1,
         ]);

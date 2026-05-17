@@ -128,6 +128,7 @@ class EventsFeatureTest extends CIUnitTestCase
         $model = model('EventModel');
         $id    = $model->insert([
             'name'        => 'Event To Be Deleted',
+            'client_id'   => 1,
             'event_date'  => '2025-07-07',
             'location_id' => 1,
         ]);

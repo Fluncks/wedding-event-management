@@ -10,6 +10,8 @@
     failOnRisky="true"
     failOnWarning="true"
     cacheDirectory="build/.phpunit.cache">
+    <!-- Code coverage disabled for environments without coverage driver -->
+    <!--
     <coverage
         includeUncoveredFiles="true"
         pathCoverage="false"
@@ -22,6 +24,7 @@
             <text outputFile="php://stdout" showUncoveredFiles="false"/>
         </report>
     </coverage>
+    -->
     <testsuites>
         <testsuite name="App">
             <directory>./tests</directory>

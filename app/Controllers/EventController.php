@@ -13,8 +13,13 @@ class EventController extends BaseController
 
     public function index()
     {
-        $events = $this->eventModel->listWithRelations();
-        return view('event-list', ['events' => $events]);
+        $search = $this->request->getGet('q') ?? '';
+        $events = $this->eventModel->listWithRelations($search);
+
+        return view('event-list', [
+            'events' => $events,
+            'search' => $search,
+        ]);
     }
 
     public function save()

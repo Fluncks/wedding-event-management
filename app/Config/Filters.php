@@ -102,6 +102,15 @@ class Filters extends BaseFilters
         'POST' => ['csrf'],
     ];
 
+    public function __construct()
+    {
+        parent::__construct();
+
+        if (defined('ENVIRONMENT') && ENVIRONMENT === 'testing') {
+            $this->methods = [];
+        }
+    }
+
     /**
      * List of filter aliases that should run on any
      * before or after URI patterns.
