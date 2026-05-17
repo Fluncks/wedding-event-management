@@ -26,6 +26,13 @@ class EventModel extends Model
     protected $useTimestamps    = true;
     protected $createdField     = 'created_at';
     protected $updatedField     = 'updated_at';
+    protected $validationRules  = [
+        'name'        => 'required',
+        'event_date'  => 'required',
+        'location_id' => 'required',
+    ];
+    protected $validationMessages = [];
+    protected $skipValidation     = false;
 
     public function listWithRelations(?string $search = null): array
     {
